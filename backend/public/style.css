@@ -7,7 +7,7 @@ body {
 .container {
   max-width: 500px;
   margin: auto;
-  background: white;
+  background: purple;
   padding: 20px;
   border-radius: 8px;
 }
