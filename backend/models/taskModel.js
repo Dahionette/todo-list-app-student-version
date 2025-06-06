@@ -1,6 +1,6 @@
 const db = require("../db");
 
-//Add a comment describing what this function does and what does it return
+//This sends  a request and a reponse or ypu to input your tasks 
 const getTasks = async () => {
   const res = await db.query(
     //correct this SQL query to select all tasks from the database
@@ -9,7 +9,7 @@ const getTasks = async () => {
   return res.rows;
 };
 
-//Write a comment describing what this function insersts a new task into the database
+//This code inserts the title and decription of the tasks you added.
 const addTask = async (title, description) => {
   const res = await db.query(
     "INSERT INTO tasks (title, description, is_complete, created_at) VALUES ($1, $2, false, NOW()) RETURNING *",
